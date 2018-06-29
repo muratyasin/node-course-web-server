@@ -59,6 +59,13 @@ app.get('/about', (req,res) =>{
 
 })
 
+app.get('/projects', (req,res) =>{
+    res.render('projects.hbs', {
+      pageTitle : 'Projects'
+    });
+
+})
+
 app.get('/error', (req,res) =>{
 
   //res.send('<h1>Hello Express!</h1>');
@@ -70,5 +77,5 @@ app.get('/error', (req,res) =>{
 });
 
 app.listen(port, () => {
-  console.log('Server up is up on port 3000');
+  console.log( `Server up is up on port on ${port}`);
 });
